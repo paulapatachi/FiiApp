@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="img/facultylogo.png">
+    <title>Paula Licenta</title>
+
+    <!--  Fonts and icons     -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+
+    <base href="~/" />
+</head>
+<body>
+  <input type="hidden" id="axiosUrls"
+         data-loginTokenUrl="@Url.Action("GetToken","Auth")"
+         data-registerUrl="@Url.Action("RegisterNewUser","Auth")"
+         data-sendEmailUrl="@Url.Action("SendEmail","User")"
+         data-userInfoUrl="@Url.Action("GetUserInfo","User")"
+         data-studentGradesUrl="@Url.Action("GetStudentGradesForCourse","Faculty")"
+         data-studentFinalGradesUrl="@Url.Action("GetStudentFinalGrades","Faculty")"
+         data-studentGradesMeansUrl="@Url.Action("GetStudentGradesMeans","Faculty")"
+         data-studentClassAndEnrollmentYearUrl="@Url.Action("GetStudentClassAndEnrollmentYear","Faculty")"
+         data-teachersUrl="@Url.Action("GetTeachers","Faculty")"
+         data-gradesPerSemesterUrl="@Url.Action("GetStudentsGradesPerSemester","Faculty")"
+         data-currentUserGradesPerSemesterUrl="@Url.Action("GetCurrentUserGradesPerSemester","Faculty")"
+         data-numberOfGradesUrl="@Url.Action("GetNumberOfEachGrade","Faculty")"
+         data-testLoginUrl="@Url.Action("GetTestValues","Values")" 
+         data-ECTSPredictionUrl="@Url.Action("GetECTSPredictionGrade","MLAndStatistics")"
+         data-PFPredictionUrl="@Url.Action("GetPFPredictionGrade","MLAndStatistics")"
+         data-mathStatisticsUrl="@Url.Action("GetMathStatisticsData","MLAndStatistics")"
+         data-attendanceStatisticsUrl="@Url.Action("GetAttendanceStatistics","MLAndStatistics")"
+         data-genderStatisticsUrl="@Url.Action("GetGenderStatistics","MLAndStatistics")"
+         data-finalScoreStatisticsByYearUrl="@Url.Action("GetFinalScoreStatisticsByYear","MLAndStatistics")"
+         data-finalScoreStatisticsByClassUrl="@Url.Action("GetFinalScoreStatisticsByClass","MLAndStatistics")"
+         data-finalScoreStatisticsByGenderUrl="@Url.Action("GetFinalScoreStatisticsByGender","MLAndStatistics")"
+         data-seminarActivityStatisticsUrl="@Url.Action("GetSeminarActivityStatistics","MLAndStatistics")"
+         data-passedStudentsStatisticsUrl="@Url.Action("GetNumberOfPassedStudents","MLAndStatistics")"
+         />
+
+  @RenderBody()
+  <script src="~/dist/main.js" asp-append-version="true"></script>
+</body>
+</html>
